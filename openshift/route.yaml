@@ -1,14 +1,13 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  annotations:
   labels:
-    chart: cloudnativesampleapp-1.0.0
-  name: cloudnative-sample
-  namespace: demo-gitops-app
+    app: spring-petclinic
+  name: spring-petclinic
 spec:
   port:
-    targetPort: 9080
+    targetPort: 8080-tcp
   to:
     kind: Service
-    name: cloudnativesampleapp-service
+    name: spring-petclinic
+    weight: 100
