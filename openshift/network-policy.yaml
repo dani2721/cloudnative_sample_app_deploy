@@ -6,5 +6,5 @@ metadata:
 spec:
   podSelector: 
     matchLabels:
-          app: spring-petclinic-test
+          app: spring-petclinic-wrong-label
   ingress: []
