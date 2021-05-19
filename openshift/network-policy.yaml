@@ -1,0 +1,10 @@
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: default-deny-spring-petclinic
+  namespace: demo-gitops-app
+spec:
+  podSelector: 
+    matchLabels:
+          app: spring-petclinic
+  ingress: []
